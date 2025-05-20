@@ -73,3 +73,30 @@ Here are a few examples from the dataset:
 | madern            | মডার্ন           |
 | sangho            | সংঘ              |
 
+## Model Architecture
+I implemented a flexible Recurrent Neural Network (RNN) based sequence-to-sequence (seq2seq) model for character-level transliteration from Romanized Bengali to native Bengali script. The architecture consists of the following components:
+
+### 1.Input Embedding Layer
+The input Romanized character sequence is passed through an embedding layer to learn dense vector representations of characters.
+
+### 2.Encoder RNN
+The embedded input is processed by an encoder RNN (configurable as RNN, GRU, or LSTM) which captures the sequential context. The final hidden state(s) from the encoder summarize the entire input sequence.
+
+### 3.Decoder RNN
+The decoder is initialized with the encoder’s final hidden state and generates one output character at a time. It also uses an embedding layer for its input characters and ends with a linear projection to the output vocabulary.
+
+### 4.Beam Search (Inference)
+For inference, a beam search decoding strategy is implemented to improve prediction quality by exploring multiple candidate output sequences.
+
+### 5.Hidden State Adjustment
+A utility function handles cases where the number of encoder and decoder layers do not match by appropriately padding or trimming the hidden states.
+
+## Model Flexibility
+The model is fully configurable through hyperparameters, allowing easy experimentation. You can control:
+
+- Input embedding dimension
+- Hidden state size
+- RNN cell type: rnn, lstm, or gru
+- Number of layers in both encoder and decoder
+- Dropout rate in multi-layer setups
+
