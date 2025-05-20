@@ -230,3 +230,14 @@ Test Accuracy (Exact Match): 0.3804
 ```
 ### Predictions:
 All predictions on the test set using the best attention-based model have been saved and uploaded to my GitHub repository: [predictions_attention](https://github.com/dassrikrishna/da6401_assignment3/blob/main/predictions_attention/predictions_attention.csv)
+
+The attention-based model performs better but requires more computation and memory, leading to longer training times.
+
+## Attention Heatmaps (3×3 Grid)
+We visualized the model’s attention by plotting heatmaps for 9 random test samples in a 3×3 grid. These show how the model aligns input (Latin) characters to output (Bengali) characters.
+
+Bengali text was rendered using the Lohit-Bengali font.
+
+Attention weights were taken during inference.
+
+The heatmaps were saved as [heatmap_attension.png]().
