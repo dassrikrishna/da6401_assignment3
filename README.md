@@ -155,4 +155,17 @@ wandb.log({
 | `cell`           | 'RNN', 'GRU', 'LSTM' |
 | `beam_size`      | 1, 3, 5             |
 
+## **Smart Search Strategies for Fewer Runs**
+To avoid running all 1,350 combinations, I used the following strategies to make the sweep more efficient:
 
+-  **Bayesian Optimization:**
+
+Focused the search on promising hyperparameter regions using past performance. More effective than random search for large spaces.
+
+- **Early Stopping with Hyperband:**
+
+Automatically stopped poorly performing runs early - after at least 3 iterations, saving time and compute.
+
+- **Conditional Dropout:**
+
+Applied dropout only when the encoder or decoder had more than one layer, avoiding unnecessary regularization on shallow models.
