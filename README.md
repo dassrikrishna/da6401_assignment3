@@ -99,4 +99,33 @@ The model is fully configurable through hyperparameters, allowing easy experimen
 - RNN cell type: rnn, lstm, or gru
 - Number of layers in both encoder and decoder
 - Dropout rate in multi-layer setups
+- Beam width for inference
+
+## Training and Evaluation
+To train the model, I implemented standard training and evaluation loops using PyTorch. The training process includes **gradient clipping** for stability and uses **teacher forcing** for sequence prediction.
+
+### Training Loop
+Function: `train_epoch(model, dataloader, optimizer, criterion, device)`
+
+Applies teacher forcing (`default ratio = 0.5`)
+
+Performs backpropagation and updates model weights
+
+Uses gradient clipping to prevent exploding gradients
+
+### Evaluation Loop
+Function: `evaluate(model, dataloader, criterion, device)`
+
+Runs the model in evaluation mode
+
+No teacher forcing (`teacher_forcing_ratio = 0`)
+
+Returns average loss over the validation/test set
+
+### Sequence-Level Accuracy
+Function: `sequence_accuracy(model, dataloader, target_idx2char, device)`
+
+Computes accuracy based on exact match between predicted and ground truth character sequences
+
+Uses beam search decoding (`beam_width = 3`) for higher-quality predictions
 
