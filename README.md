@@ -128,4 +128,31 @@ Function: `sequence_accuracy(model, dataloader, target_idx2char, device)`
 Computes accuracy based on exact match between predicted and ground truth character sequences
 
 Uses beam search decoding (`beam_width = 3`) for higher-quality predictions
+## Main Training Loop (with W&B)
+I integrated Weights & Biases (W&B) to manage experiments, perform hyperparameter sweeps, and track metrics like accuracy, loss, and model configuration.
+```python
+wandb.log({
+    "epoch": epoch+1,
+    "train_loss": train_loss,
+    "train_accuracy": train_acc,
+    "val_loss": val_loss,
+    "val_accuracy": val_acc
+})
+```
+## Hyperparameter Tuning (W&B Sweeps)
+### Sweep Strategy
+- Type: `Bayesian Optimization`
+- Early Termination: Hyperband (`min_iter = 3`)
+- Project: `dakshina-seq2seq`
+### Swept Parameters:
+| Hyperparameter   | Values                  |
+| ---------------- | ----------------------- |
+| `emb_dim`        | 16, 32, 64, 128, 256 |
+| `hidden_dim`     | 16, 32, 64, 128, 256 |
+| `encoder_layers` | 1, 2, 3              |
+| `decoder_layers` | 1, 2, 3             |
+| `dropout`        | 0.2, 0.3]            |
+| `cell`           | 'RNN', 'GRU', 'LSTM' |
+| `beam_size`      | 1, 3, 5             |
+
 
