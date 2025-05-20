@@ -244,3 +244,11 @@ Heatmaps were created using seaborn, and Bengali characters were displayed using
 
 The final grid was saved as [heatmap_attension.png](https://github.com/dassrikrishna/da6401_assignment3/blob/main/predictions_attention/heatmap_attension.png) in the working directory.
 
+## Connectivity Visualization
+The `visualize_connectivity` function generates heatmaps that show the attention weights between input and output characters. Each row in the heatmap corresponds to a character in the output (decoded sequence), and each column corresponds to a character in the input.
+
+The color intensity in each cell indicates how much attention the model pays to a specific input character while generating a specific output character. Cells are also annotated with input characters to make it easier to interpret.
+
+By looking at $i$-th row, you can see which input character(s) the model focused on while generating the i-th output character. This helps us understand how the model is learning to align the input and output sequences during decoding.
+
+The final visualizations are saved to the file [visualize_connectivity.png](https://github.com/dassrikrishna/da6401_assignment3/blob/main/visualize_connectivity.png).
