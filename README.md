@@ -169,3 +169,10 @@ Automatically stopped poorly performing runs early - after at least 3 iterations
 - **Conditional Dropout:**
 
 Applied dropout only when the encoder or decoder had more than one layer, avoiding unnecessary regularization on shallow models.
+
+## W&B Visualizations
+To visualize the hyperparameter sweep results using Weights & Biases (W&B), we generated the following plots:
+
+- Accuracy vs. Created Time - shows how accuracy evolved across different experiment runs.
+- Parallel Coordinates Plot - displays relationships between hyperparameters and model performance.
+- Correlation Summary Table - highlights correlations between hyperparameters and metrics like accuracy and loss.
