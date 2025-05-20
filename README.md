@@ -12,3 +12,21 @@
  
 
 ## [Problem Statement](https://wandb.ai/sivasankar1234/DA6401/reports/Assignment-3--VmlldzoxMjM4MjYzMg)
+
+## Goal of the Assignment
+The primary objectives of this assignment are as follows:
+
+### 1.Model Sequence-to-Sequence Learning Problems
+Understand how to model sequence-to-sequence (seq2seq) learning tasks using Recurrent Neural Networks (RNNs).
+
+### 2.Compare Different RNN Cells
+Explore and compare the performance of different RNN cell architectures including:
+- Vanilla RNN
+- Long Short-Term Memory (LSTM)
+- Gated Recurrent Unit (GRU)
+  
+### 3.Understand Attention Mechanisms
+Learn how attention mechanisms help overcome the limitations of traditional seq2seq models by improving context representation and performance.
+
+### 4.Visualize RNN Components
+Gain insights into the internal workings of RNN-based models by visualizing the interactions between various components during the learning process.
