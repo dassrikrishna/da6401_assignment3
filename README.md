@@ -252,3 +252,6 @@ The color intensity in each cell indicates how much attention the model pays to 
 By looking at $i$-th row, you can see which input character(s) the model focused on while generating the i-th output character. This helps us understand how the model is learning to align the input and output sequences during decoding.
 
 The final visualizations are saved to the file [visualize_connectivity.png](https://github.com/dassrikrishna/da6401_assignment3/blob/main/visualize_connectivity.png).
+**Location:** Inside `da6401-assignment3-attention.ipynb` notebook, under `#11. Visualization Connectivity`.
+
+
