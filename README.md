@@ -253,6 +253,6 @@ By looking at $i$-th row, you can see which input character(s) the model focused
 
 The final visualizations are saved to the file [visualize_connectivity.png](https://github.com/dassrikrishna/da6401_assignment3/blob/main/visualize_connectivity.png).
 
-### Location: Inside `da6401-assignment3-attention.ipynb` notebook, under `#11. Visualization Connectivity`.
+**Location:** Inside `da6401-assignment3-attention.ipynb` notebook, under `#11. Visualization Connectivity`.
 
 
