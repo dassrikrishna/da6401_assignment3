@@ -176,3 +176,29 @@ To visualize the hyperparameter sweep results using Weights & Biases (W&B), we g
 - Accuracy vs. Created Time - shows how accuracy evolved across different experiment runs.
 - Parallel Coordinates Plot - displays relationships between hyperparameters and model performance.
 - Correlation Summary Table - highlights correlations between hyperparameters and metrics like accuracy and loss.
+
+## Evaluation on Test Data:
+
+After completing hyperparameter tuning and validation on the training and validation sets, I evaluated the best model on the test set.
+
+**(a) Test Accuracy:**
+Using the best configuration from the sweep (`Run ID: vb1yhddm`):
+```bash
+Best Validation Accuracy (Exact Match): 0.3448
+```
+**Best Hyperparameters:**
+```python
+cell: LSTM
+dropout: 0.2
+emb_dim: 64
+hidden_dim: 256
+encoder_layers: 3
+decoder_layers: 2
+beam_size: 3
+```
+**Test Set Result:**
+```bash
+Test Accuracy (Exact Match): 0.3447
+```
+## Predictions:
+All predictions from the best model on the test set have been saved and uploaded to my GitHub repository under the folder:[**predictions_vanilla**](https://github.com/dassrikrishna/da6401_assignment3/blob/main/predictions_vanilla/predictions_vanilla.csv)
