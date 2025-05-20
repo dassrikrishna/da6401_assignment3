@@ -3,6 +3,8 @@
 #### Github Link: [Click Here](https://github.com/dassrikrishna/da6401_assignment3)
 #### Seq2Seq Vanila: [Click Here](https://github.com/dassrikrishna/da6401_assignment3/blob/main/da6401-assignment3-vanila.ipynb)
 #### Seq2Seq Attention: [Click Here](https://github.com/dassrikrishna/da6401_assignment3/blob/main/da6401-assignment3-attention.ipynb)
+#### predictions_vanilla: [Click Here](https://github.com/dassrikrishna/da6401_assignment3/tree/main/predictions_vanilla)
+#### predictions_attention [Click Here](https://github.com/dassrikrishna/da6401_assignment3/tree/main/predictions_attention)
 
 ## DEEP LEARNING
 #### ```SRIKRISHNA DAS (MA24M025)```
