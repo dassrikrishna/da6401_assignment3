@@ -234,10 +234,13 @@ All predictions on the test set using the best attention-based model have been s
 The attention-based model performs better but requires more computation and memory, leading to longer training times.
 
 ## Attention Heatmaps (3×3 Grid)
-We visualized the model’s attention by plotting heatmaps for 9 random test samples in a 3×3 grid. These show how the model aligns input (Latin) characters to output (Bengali) characters.
+To visualize the attention mechanism of the best model, I randomly selected 9 test examples and plotted their attention heatmaps in a 3×3 grid. Each heatmap shows how the model aligns source (Latin) characters to target (Bengali) characters during decoding.
 
-Bengali text was rendered using the Lohit-Bengali font.
+Bengali font rendering was handled using [Lohit-Bengali](https://github.com/dassrikrishna/da6401_assignment3/blob/main/Lohit-Bengali.ttf).
 
-Attention weights were taken during inference.
+Attention weights were extracted during inference from the decoder.
 
-The heatmaps were saved as [heatmap_attension.png]().
+Heatmaps were created using seaborn, and Bengali characters were displayed using proper font support.
+
+The final grid was saved as [heatmap_attension.png](https://github.com/dassrikrishna/da6401_assignment3/blob/main/predictions_attention/heatmap_attension.png) in the working directory.
+
