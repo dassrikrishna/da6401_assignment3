@@ -199,7 +199,7 @@ beam_size: 3
 ```bash
 Test Accuracy (Exact Match): 0.3447
 ```
-## Predictions:
+### Predictions:
 All predictions from the best model on the test set have been saved and uploaded to my GitHub repository under the folder: [**predictions_vanilla**](https://github.com/dassrikrishna/da6401_assignment3/blob/main/predictions_vanilla/predictions_vanilla.csv)
 
 
@@ -228,5 +228,5 @@ beam_size: 3
 ```bash
 Test Accuracy (Exact Match): 0.3804
 ```
-## Predictions:
+### Predictions:
 All predictions on the test set using the best attention-based model have been saved and uploaded to my GitHub repository: [predictions_attention](https://github.com/dassrikrishna/da6401_assignment3/blob/main/predictions_attention/predictions_attention.csv)
