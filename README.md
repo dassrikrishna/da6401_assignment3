@@ -48,6 +48,15 @@ The goal is to train a model $\hat{f}(x) = y$ that takes a Romanized Bengali wor
 
 This is framed as a character-level sequence-to-sequence learning task. It simplifies the machine translation problem by focusing on transliteration — converting sequences of characters from one script to another.
 
+### Dataset Statistics
+- Training samples: 94,546
+- Validation samples: 9,279
+- Test samples: 9,228
+- Input vocabulary size (Romanized): 29
+- Target vocabulary size (Bengali): 63
+- Maximum input sequence length: 22 characters
+- Maximum target sequence length: 24 characters
+
 ### Sample Word Pairs
 Here are a few examples from the dataset:
 | Romanized (Input) | Bengali (Target) |
