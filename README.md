@@ -143,7 +143,6 @@ wandb.log({
 ### Sweep Strategy
 - Type: `Bayesian Optimization`
 - Early Termination: Hyperband (`min_iter = 3`)
-- Project: `dakshina-seq2seq`
 ### Swept Parameters:
 | Hyperparameter   | Values                  |
 | ---------------- | ----------------------- |
@@ -202,3 +201,32 @@ Test Accuracy (Exact Match): 0.3447
 ```
 ## Predictions:
 All predictions from the best model on the test set have been saved and uploaded to my GitHub repository under the folder: [**predictions_vanilla**](https://github.com/dassrikrishna/da6401_assignment3/blob/main/predictions_vanilla/predictions_vanilla.csv)
+
+
+## Model with Attention
+To enhance the baseline sequence-to-sequence architecture, I incorporated an attention mechanism, which allows the decoder to focus on relevant parts of the input sequence dynamically during decoding. This architectural modification improves the model's ability to handle longer sequences and complex alignments.
+
+I reused the same hyperparameter sweep strategy (Bayesian optimization with early stopping via Hyperband) to tune the model effectively with minimal runs while maintaining strong performance.
+
+### Evaluate Best Model with Attention
+After completing hyperparameter tuning and validating only on the training and validation sets, I evaluated my best attention-based model on the test set.
+
+``` bash
+Best Validation Accuracy (Exact Match):0.3915
+```
+**Best Hyperparameters:**
+``` python
+cell: LSTM
+dropout: 0.2
+emb_dim: 128
+hidden_dim: 256
+encoder_layers: 3
+decoder_layers: 2
+beam_size: 3
+```
+**Test Set Result:**
+```bash
+Test Accuracy (Exact Match): 0.3804
+```
+## Predictions:
+All predictions on the test set using the best attention-based model have been saved and uploaded to my GitHub repository: [predictions_attention](https://github.com/dassrikrishna/da6401_assignment3/blob/main/predictions_attention/predictions_attention.csv)
